@@ -2,6 +2,7 @@ import Navbar from '@/components/navbar/Navbar'
 import './globals.css'
 import { Inter, Ubuntu } from 'next/font/google'
 import Footer from '@/components/footer/Footer'
+import ThemeProvider from '@/Context/ThemeContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,13 +19,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${ubuntu.className} bg-none bg-neutral-950 text-zinc-400`}>
-
-        <div className='max-w-page min-h-screen mx-auto px-16 flex flex-col justify-between'>
-          <Navbar />
-          {children}
-          <Footer />
-        </div>
+        <script src="https://kit.fontawesome.com/a35d200abf.js" crossOrigin="anonymous"></script>
+      <body className={`${ubuntu.className}`}>
+        <ThemeProvider>
+          <div className='max-w-page min-h-screen mx-auto px-16 flex flex-col justify-between'>
+            <Navbar />
+            {children}
+            <Footer />
+          </div>
+        </ThemeProvider>
 
       </body>
     </html>

@@ -12,7 +12,7 @@ export default function Contact() {
                 <form className="flex flex-col gap-5 flex-1">
                     <input className="p-3 bg-transparent border-2 border-solid border-zinc-400" type="text" placeholder="Name"/>
                     <input className="p-3 bg-transparent border-2 border-solid border-zinc-400" type="email" placeholder="Email"/>
-                    <textarea className="p-3 bg-transparent border-2 border-solid border-zinc-400" placeholder="Message" cols="30" rows="10"></textarea>
+                    <textarea className="p-3 bg-transparent border-2 border-solid border-zinc-400 resize-none" placeholder="Message" cols="30" rows="10"></textarea>
                     <Button url='#' text='Send'/>
                 </form>
             </div>
