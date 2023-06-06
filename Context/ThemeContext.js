@@ -13,8 +13,7 @@ export default function ThemeProvider({ children }) {
 
     return (
         <ThemeContext.Provider value={{ toggle, mode }}>
-            {console.log(mode)}
-            <div className={`${mode}`}>
+            <div className={`theme ${mode}`}>
                 {children}
             </div>
         </ThemeContext.Provider>

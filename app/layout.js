@@ -19,7 +19,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+
         <script src="https://kit.fontawesome.com/a35d200abf.js" crossOrigin="anonymous"></script>
+      </head>
       <body className={`${ubuntu.className}`}>
         <ThemeProvider>
           <div className='max-w-page min-h-screen mx-auto px-16 flex flex-col justify-between'>
