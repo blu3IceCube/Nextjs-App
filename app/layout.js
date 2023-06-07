@@ -2,7 +2,7 @@ import Navbar from '@/components/navbar/Navbar'
 import './globals.css'
 import { Inter, Ubuntu } from 'next/font/google'
 import Footer from '@/components/footer/Footer'
-import ThemeProvider from '@/Context/ThemeContext'
+import ThemeProvider from '@/app/Context/ThemeContext'
 
 const inter = Inter({ subsets: ['latin'] })
 

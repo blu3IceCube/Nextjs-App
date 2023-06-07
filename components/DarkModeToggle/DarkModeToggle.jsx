@@ -1,5 +1,5 @@
 "use client"
-import { ThemeContext } from "@/Context/ThemeContext"
+import { ThemeContext } from "@/app/Context/ThemeContext"
 import { useContext } from "react"
 
 export default function DarkModeToggle() {
