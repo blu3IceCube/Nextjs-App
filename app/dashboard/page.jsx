@@ -6,8 +6,6 @@ export default function Dashboard() {
 
     const session = useSession()
 
-    console.log(session);
-
     return (
         <div>
             Dashboard Page.
