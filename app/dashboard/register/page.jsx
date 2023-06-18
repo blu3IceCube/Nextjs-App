@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function Register() {
-  const [formData, setFormData] = useState({
+  const [registerFormData, setRegisterFormData] = useState({
     username: "",
     email: "",
     password: "",
@@ -16,7 +16,7 @@ export default function Register() {
   const router = useRouter()
 
   function handleChange(e) {
-    setFormData(prevData => {
+    setRegisterFormData(prevData => {
         return {
             ...prevData,
             [e.target.name]: e.target.value
@@ -33,7 +33,7 @@ export default function Register() {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(formData)
+            body: JSON.stringify(registerFormData)
         })
 
         res.status === 201 && router.push("/dashboard/login?success=true")
@@ -52,7 +52,7 @@ export default function Register() {
           type="text"
           placeholder="Username"
           name="username"
-          value={formData.username}
+          value={registerFormData.username}
           onChange={handleChange}
           required
         />
@@ -61,7 +61,7 @@ export default function Register() {
           type="email"
           placeholder="Email"
           name="email"
-          value={formData.email}
+          value={registerFormData.email}
           onChange={handleChange}
           required
         />
@@ -70,7 +70,7 @@ export default function Register() {
           type="password"
           placeholder="Password"
           name="password"
-          value={formData.password}
+          value={registerFormData.password}
           onChange={handleChange}
           required
         />
