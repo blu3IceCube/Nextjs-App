@@ -7,7 +7,7 @@ export const metadata = {
 };
 
 async function getData() {
-  const res = await fetch("api/posts", {
+  const res = await fetch("./api/posts", {
     cache: "no-store",
   });
 
