@@ -7,12 +7,9 @@ export const metadata = {
 };
 
 async function getData() {
-  const res = await fetch(
-    "https://www.nextjs-app-git-main-blu3icecube.vercel.app/api/posts",
-    {
-      cache: "no-store",
-    }
-  );
+  const res = await fetch("http://localhost:3000/api/posts", {
+    cache: "no-store",
+  });
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
